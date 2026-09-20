@@ -1,4 +1,4 @@
-# Real-Time Monte Carlo Denoiser
+# Real-Time Denoiser for Ray Tracing 
 
 A U-Net denoiser for 1-spp path-traced frames, trained on the BMFR dataset with
 albedo demodulation and log-space loss. Currently spatial-only, temporal
