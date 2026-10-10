@@ -27,8 +27,8 @@ resolution, reduced per image before the log.
 
 | Scene | Split | Input | Output | Gain |
 |---|---|---|---|---|
-| classroom | train | 9.89 dB | 33.25 dB | +23.4 dB |
-| living-room | train | 10.92 dB | 34.73 dB | +23.8 dB |
+| classroom | train | 9.89 dB |
+| living-room | train | 10.92 dB |
 | san-miguel | **held out** | 10.18 dB | 19.39 dB | +9.21 dB |
 
 ---
