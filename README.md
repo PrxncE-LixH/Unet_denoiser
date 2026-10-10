@@ -4,7 +4,7 @@ A U-Net denoiser for 1-spp path-traced frames, trained on the BMFR dataset with
 albedo demodulation and log-space loss. Currently spatial-only, temporal
 reprojection is validated and pending integration.
 
-## Video Demo
+## Spatial Build Video Demo 
 [![noisy / denoised / reference Demo](assets/screenshot.png)](https://youtu.be/3pdgesbkxd0)
 
 ---
