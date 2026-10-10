@@ -12,7 +12,7 @@ BMFR Dataset
 
 
 ## Temporal Build Video Demo 
-[![noisy / denoised / reference Demo](assets/screenshot_01.png)](https://https://youtu.be/awtGA9TlpNk)
+[![noisy / denoised / reference Demo](assets/screenshot_01.png)](https://youtu.be/awtGA9TlpNk)
 
 Unreal Engine Dataset
 ---
