@@ -15,7 +15,7 @@ reprojection is validated and pending integration.
 [![noisy / denoised / reference Demo](assets/Screenshot_01.png)](https://youtu.be/awtGA9TlpNk)
 
 - Trained on a custom dataset captured from Unreal Engine
-- Side by side comparison: 'https://youtu.be/prNKZ6O2gko'
+- Side by side comparison: https://youtu.be/prNKZ6O2gko
 ---
 
 
