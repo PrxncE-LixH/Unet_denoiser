@@ -7,14 +7,14 @@ reprojection is validated and pending integration.
 ## Spatial Build Video Demo 
 [![noisy / denoised / reference Demo](assets/screenshot.png)](https://youtu.be/3pdgesbkxd0)
 
-BMFR Dataset
+- Trained on the BMFR Dataset
 ---
 
 
 ## Temporal Build Video Demo 
 [![noisy / denoised / reference Demo](assets/Screenshot_01.png)](https://youtu.be/awtGA9TlpNk)
 
-Unreal Engine Dataset
+- Trained on a custom dataset captured from Unreal Engine 
 ---
 
 
