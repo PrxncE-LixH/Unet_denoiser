@@ -177,7 +177,17 @@ already in VRAM. PSNR is full-frame on the held-out scene.
 
 **4.6× faster for 0.26 dB**, with 2.3× the parameters.
 
+## Inference cost
 
+`(48, 96, 192, 384)` + stride-2 stem + 1×1 up-convs — **18.07 M parameters**,
+34.5 MiB of fp16 weights (constant across resolutions).
+
+| Render resolution | Mpx | GPU compute | Activation memory | Total VRAM |
+|---|---|---|---|---|
+| 960×528 | 0.51 | 2.35 ms | _TODO_ MiB | _TODO_ MiB |
+| 1280×720 | 0.92 | 4.44 ms | 126.7 MiB | 161.2 MiB |
+| 1920×1080 | 2.07 | 9.93 ms | 285.0 MiB | 319.5 MiB |
+| 2560×1440 | 3.69 | 17.80 ms | _TODO_ MiB | _TODO_ MiB |
 
 
 
