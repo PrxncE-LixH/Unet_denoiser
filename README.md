@@ -184,10 +184,10 @@ already in VRAM. PSNR is full-frame on the held-out scene.
 
 | Render resolution | Mpx | GPU compute | Activation memory | Total VRAM |
 |---|---|---|---|---|
-| 960×528 | 0.51 | 2.35 ms | _TODO_ MiB | _TODO_ MiB |
-| 1280×720 | 0.92 | 4.44 ms | 126.7 MiB | 161.2 MiB |
-| 1920×1080 | 2.07 | 9.93 ms | 285.0 MiB | 319.5 MiB |
-| 2560×1440 | 3.69 | 17.80 ms | _TODO_ MiB | _TODO_ MiB |
+| 960×528 | 0.51 | 2.35 ms | 73.1 MB | 109.3 MB |
+| 1280×720 | 0.92 | 4.44 ms | 132.9 MB | 169.1 MB |
+| 1920×1080 | 2.07 | 9.93 ms | 298.9 MB | 335.1 MB |
+| 2560×1440 | 3.69 | 17.80 ms | 531.2 MB | 567.4 MB |
 
 
 
