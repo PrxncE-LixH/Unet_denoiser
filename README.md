@@ -157,6 +157,32 @@ the test fires on genuine disocclusions rather than over-rejecting.
 Validation buffers must be sampled with `INTER_NEAREST`; bilinear across a depth
 discontinuity blends two surfaces into a value belonging to neither.
 
+
+## Architecture and inference cost
+
+TensorRT fp16 GPU compute time on an RTX 5060 Ti, measured with `trtexec`.
+Excludes host transfers, which do not occur in-engine where G-buffers are
+already in VRAM. PSNR is full-frame on the held-out scene.
+
+| | Baseline | Optimised |
+|---|---|---|
+| Levels | 3 | 4 |
+| Channels | (64, 128, 256) | (48, 96, 192, 384) |
+| Stride-2 stem | — | yes |
+| Up-conv kernel | 3×3 | 1×1 |
+| Parameters | 8.00 M | 18.07 M |
+| Inference resolution | 960×528 | 960×528 |
+| **TRT fp16 compute** | **10.82 ms** | **2.35 ms** |
+| **Held-out PSNR** | **33.71 dB** | **33.45 dB** |
+
+**4.6× faster for 0.26 dB**, with 2.3× the parameters.
+
+
+
+
+
+
+
 ## Deployment (in progress)
 
 - [ ] Reduce architecture to a real-time budget 
