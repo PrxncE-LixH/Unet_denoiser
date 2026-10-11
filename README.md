@@ -7,36 +7,6 @@ corpus. The model is **not yet real-time**. This will be addressed in the next i
 
 ---
 
-## Spatial Build 
-
-Full-frame PSNR at 960×536, computed on remodulated, Reinhard-tonemapped output,
-reduced per image before the log. The noisy input's own PSNR is reported
-alongside every number
-
-### Held-out scene (`San Miguel`)
-
-| Model | PSNR | Gain over input |
-|---|---|---|
-| 1-spp input | ~10 dB | — |
-| Spatial only | 28.29 dB | ~+18 dB |
-
-
-
-## Spatial Build Video Demo 
-[![noisy / denoised / reference Demo](assets/screenshot.png)](https://youtu.be/3pdgesbkxd0)
-
-- Trained on the BMFR Dataset
-
-## Setup
-
-- **Dataset:** BMFR (Koskela et al. 2019), 7 scenes × 60 frames, 720×1280
-  - Buffers: 1-spp color, albedo, shading normal, world position, reference
-  - [Dataset link](https://etsin.fairdata.fi/dataset/0ab24b68-4658-4259-9f1d-3150be898c63)
-- **Split:** held out `san-miguel`
-- **Hardware:**  (ROCm 10 / Radeon RX 7900 XTX, Ubuntu)
-- **Training:**  epochs= 25, Adam lr=1e-4, batch 32, 256×256 random crops, 16 patches/frame
----
-
 
 ## Temporal Build 
 
@@ -95,6 +65,36 @@ Temporal reprojection resulted in **33.71 dB** compared to the spatial baseline.
 ---
 
 ## Setup
+
+## Spatial Build 
+
+Full-frame PSNR at 960×536, computed on remodulated, Reinhard-tonemapped output,
+reduced per image before the log. The noisy input's own PSNR is reported
+alongside every number
+
+### Held-out scene (`San Miguel`)
+
+| Model | PSNR | Gain over input |
+|---|---|---|
+| 1-spp input | ~10 dB | — |
+| Spatial only | 28.29 dB | ~+18 dB |
+
+
+
+## Spatial Build Video Demo 
+[![noisy / denoised / reference Demo](assets/screenshot.png)](https://youtu.be/3pdgesbkxd0)
+
+- Trained on the BMFR Dataset
+
+## Setup
+
+- **Dataset:** BMFR (Koskela et al. 2019), 7 scenes × 60 frames, 720×1280
+  - Buffers: 1-spp color, albedo, shading normal, world position, reference
+  - [Dataset link](https://etsin.fairdata.fi/dataset/0ab24b68-4658-4259-9f1d-3150be898c63)
+- **Split:** held out `san-miguel`
+- **Hardware:**  (ROCm 10 / Radeon RX 7900 XTX, Ubuntu)
+- **Training:**  epochs= 25, Adam lr=1e-4, batch 32, 256×256 random crops, 16 patches/frame
+---
 
 ## Findings
 
