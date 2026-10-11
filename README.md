@@ -26,7 +26,7 @@ Temporal reprojection resulted in **33.71 dB** compared to the spatial baseline.
 
 ### Temporal stability
 
-**Dataset** — 13 scenes rendered in Unreal Engine 5.8, 4 clips × 20 frames each,
+**Dataset** - 13 scenes rendered in Unreal Engine 5.8, 4 clips × 20 frames each,
 960×540, discontinuous clips for variation per frame rendered.
 
 | Pass | Contents |
@@ -54,7 +54,7 @@ Temporal reprojection resulted in **33.71 dB** compared to the spatial baseline.
   Strips texture so the network only reconstructs lighting.
 - **`log1p`** on color and reference. L1 in log space approximates relative error
   in linear space, so fireflies don't dominate the gradient.
-- **Loss** — L1 + 0.5 × finite-difference gradient loss (the edge term counters
+- **Loss** - L1 + 0.5 × finite-difference gradient loss (the edge term counters
   the blurring L1 alone produces).
 
 
@@ -135,13 +135,13 @@ The Y-axis direction was settled by measurement, not reasoning:
 | `flip_y=True` | 98.9% | 0.0873 |
 | `flip_y=False` | 98.9% | **0.0018** |
 
-48× separation. Note validity was *identical* for both — only the error metric
+48× separation. Note validity was *identical* for both - only the error metric
 could distinguish them, because the camera pans horizontally.
 
 ### 3. Disocclusion rejection
 
 Bounds checking alone only catches pixels that left the frame. It misses pixels
-whose history landed on a *different surface* — the case that causes ghosting.
+whose history landed on a *different surface* - the case that causes ghosting.
 Reprojecting world position and shading normal and rejecting on squared
 difference (BMFR's shipped thresholds: `position_limit_squared = 0.01`,
 `normal_limit_squared = 1.0`):
