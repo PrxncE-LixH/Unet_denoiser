@@ -6,6 +6,11 @@ corpus. The model is **not yet real-time**. This will be addressed in the next i
 
 
 ---
+## Temporal Build Video Demo 
+[![noisy / denoised / reference Demo](assets/Screenshot_01.png)](https://youtu.be/awtGA9TlpNk)
+
+- Trained on a custom dataset captured from Unreal Engine
+- Side by side comparison: https://youtu.be/prNKZ6O2gko
 
 
 ## Temporal Build 
@@ -56,11 +61,6 @@ Temporal reprojection resulted in **33.71 dB** compared to the spatial baseline.
 | **+ temporal reprojection** | **33.71 dB** | **~+24 dB** |
 
 
-## Temporal Build Video Demo 
-[![noisy / denoised / reference Demo](assets/Screenshot_01.png)](https://youtu.be/awtGA9TlpNk)
-
-- Trained on a custom dataset captured from Unreal Engine
-- Side by side comparison: https://youtu.be/prNKZ6O2gko
 
 ---
 
