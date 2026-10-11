@@ -190,17 +190,11 @@ already in VRAM. PSNR is full-frame on the held-out scene.
 | 2560×1440 | 17.80 ms | 531.2 MB | 567.4 MB |
 
 
+## Next Steps (in progress)
 
-
-
-## Deployment (in progress)
-
-- [ ] Reduce architecture to a real-time budget 
-- [ ] ONNX export
-- [ ] TensorRT fp16 engine
-- [ ] Parity check: PyTorch fp32 vs TRT fp16 on identical input
+- [ ] Further reduce architecture to a real-time budget 
 - [ ] Falcor integration and frame-time measurement
-
+- [ ] Fp8, INT8 quantization  
 ---
 
 ## References
