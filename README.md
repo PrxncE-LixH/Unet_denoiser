@@ -9,9 +9,15 @@ corpus. The model is **not yet real-time**. This will be addressed in the next i
 ## Temporal Build Video Demo 
 [![noisy / denoised / reference Demo](assets/Screenshot_01.png)](https://youtu.be/awtGA9TlpNk)
 
-- Trained on a custom dataset captured from Unreal Engine
 - Side by side comparison: https://youtu.be/prNKZ6O2gko
 
+- **Dataset:** custom dataset captured from Unreal Engine, 13 scenes [4 clips per scene] × 20 frames, 960×540
+  - Buffers: 1-spp color, albedo, shading normal, world position, reference
+    
+- **Split:** held out `Sponza`
+- **Hardware:**  (ROCm 10 / Radeon RX 7900 XTX, Ubuntu)
+- **Training:**  epochs= 60, Adam lr=1e-4, batch 32, 256×256 random crops, 16 patches/frame
+---
 
 ## Temporal Build 
 
@@ -31,7 +37,6 @@ Temporal reprojection resulted in **33.71 dB** compared to the spatial baseline.
 6 bounces, path-tracer denoiser disabled, no anti-aliasing
 (`r.PathTracing.FilterWidth 0.01`), fixed manual exposure.
 
-### Held-out scene (`Sponza`)
 
 **Input representation** — 16 channels:
 
@@ -51,20 +56,13 @@ Temporal reprojection resulted in **33.71 dB** compared to the spatial baseline.
 - **Loss** — L1 + 0.5 × finite-difference gradient loss (the edge term counters
   the blurring L1 alone produces).
 
-**Training** — Adam, lr 1e-4, batch 32, 256×256 random crops, 16 patches/frame,
-20 epochs, bf16 autocast. 
-
 
 | Model | PSNR | Gain over input |
 |---|---|---|
 | 1-spp input | ~10 dB | — |
 | **+ temporal reprojection** | **33.71 dB** | **~+24 dB** |
 
-
-
 ---
-
-## Setup
 
 ## Spatial Build 
 
