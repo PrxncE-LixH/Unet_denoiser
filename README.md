@@ -11,6 +11,7 @@ corpus. The model is **not yet real-time**. This will be addressed in the next i
 
 - Side by side comparison: https://youtu.be/prNKZ6O2gko
 
+## Setup
 - **Dataset:** custom dataset captured from Unreal Engine, 13 scenes [4 clips per scene] × 20 frames, 960×540
   - Buffers: 1-spp color, albedo, shading normal, world position, reference
     
@@ -85,7 +86,6 @@ alongside every number
 - Trained on the BMFR Dataset
 
 ## Setup
-
 - **Dataset:** BMFR (Koskela et al. 2019), 7 scenes × 60 frames, 720×1280
   - Buffers: 1-spp color, albedo, shading normal, world position, reference
   - [Dataset link](https://etsin.fairdata.fi/dataset/0ab24b68-4658-4259-9f1d-3150be898c63)
