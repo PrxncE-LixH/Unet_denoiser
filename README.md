@@ -7,9 +7,9 @@ corpus. The model is **not yet real-time**. This will be addressed in the next i
 
 ---
 ## Temporal Build Video Demo 
-[![noisy / denoised / reference Demo](assets/Screenshot_01.png)](https://youtu.be/awtGA9TlpNk)
+[![noisy / denoised / reference Demo](assets/Screenshot_01.png)](https://youtu.be/y95izfP8LOQ)
 
-- Side by side comparison: https://youtu.be/prNKZ6O2gko
+- Side by side comparison: https://youtu.be/xnQHSMGaRvg
 
 ## Setup
 - **Dataset:** custom dataset captured from Unreal Engine, 13 scenes [4 clips per scene] × 20 frames, 960×540
@@ -39,7 +39,7 @@ Temporal reprojection resulted in **33.71 dB** compared to the spatial baseline.
 (`r.PathTracing.FilterWidth 0.01`), fixed manual exposure.
 
 
-**Input representation** — 16 channels:
+**Input representation**: 16 channels:
 
 | Channels | Buffer |
 |---|---|
@@ -50,7 +50,7 @@ Temporal reprojection resulted in **33.71 dB** compared to the spatial baseline.
 | 3 | warped previous-frame output |
 | 1 | reprojection validity mask |
 
-- **Albedo demodulation** — `color / (albedo + 1e-2)` on both input and target.
+- **Albedo demodulation** - `color / (albedo + 1e-2)` on both input and target.
   Strips texture so the network only reconstructs lighting.
 - **`log1p`** on color and reference. L1 in log space approximates relative error
   in linear space, so fireflies don't dominate the gradient.
