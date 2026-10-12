@@ -189,6 +189,29 @@ already in VRAM. PSNR is full-frame on the held-out scene.
 | 1920×1080 | 9.93 ms  | 298.9 MB | 335.1 MB |
 | 2560×1440 | 17.80 ms | 531.2 MB | 567.4 MB |
 
+## Cross-stack inference latency
+
+Identical 91-node ONNX graph, identical weights, fp16 on both stacks. Batch 1,
+median of 100 iterations, three independent runs per cell (spread < 1.5%).
+Engines and programs pre-built per resolution; neither stack uses dynamic shapes.
+
+| Resolution| TensorRT 10.15<br>RTX 5060 Ti | MIGraphX 2.17<br>RX 7900 XTX | Percentage Difference |
+|---|---|---|---|---|
+| 960×528   | 2.36 ms | 1.90  ms | 1.242× |
+| 1280×720  | 4.44 ms |  3.30 ms | 1.345× |
+| 1920×1080 | 9.93 ms |  7.30 ms | 1.360× |
+| 2560×1440 | 17.80 ms | 13.15 ms| 1.354× |
+
+
+TensorRT measured with `--noDataTransfers`; MIGraphX programs compiled without
+offload copy. Both figures are device-resident compute.
+
+### The 1.35× is the compute ratio, not the bandwidth ratio
+
+| | RX 7900 XTX | RTX 5060 Ti 16GB | ratio |
+|---|---|---|---|
+| FP16 dense | 123 TFLOPS | 94.9 TFLOPS | 1.30× |
+| Bandwidth | 960 GB/s | 448 GB/s | 2.14× |
 
 ## Next Steps (in progress)
 
