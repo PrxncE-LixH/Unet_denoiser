@@ -192,7 +192,7 @@ already in VRAM. PSNR is full-frame on the held-out scene.
 
 ## Next Steps (in progress)
 
-- [ ] Further reduce architecture to a real-time budget 
+- [ ] Further optimize model architecture to fit a real-time budget 
 - [ ] Falcor integration and frame-time measurement
 - [ ] Fp8, INT8 quantization  
 ---
