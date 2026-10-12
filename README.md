@@ -196,7 +196,7 @@ median of 100 iterations, three independent runs per cell (spread < 1.5%).
 Engines and programs pre-built per resolution; neither stack uses dynamic shapes.
 
 | Resolution| TensorRT 10.15<br>RTX 5060 Ti | MIGraphX 2.17<br>RX 7900 XTX | Percentage Difference |
-|---|---|---|---|---|
+|---|---|---|---|
 | 960×528   | 2.36 ms | 1.90  ms | 1.242× |
 | 1280×720  | 4.44 ms |  3.30 ms | 1.345× |
 | 1920×1080 | 9.93 ms |  7.30 ms | 1.360× |
