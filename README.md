@@ -60,7 +60,7 @@ Temporal reprojection resulted in **33.71 dB** compared to the spatial baseline.
 
 | Model | PSNR | Gain over input |
 |---|---|---|
-| 1-spp input | ~10 dB | — |
+| 1-spp input | ~10 dB | - |
 | **+ temporal reprojection** | **33.71 dB** | **~+24 dB** |
 
 ---
@@ -75,7 +75,7 @@ alongside every number
 
 | Model | PSNR | Gain over input |
 |---|---|---|
-| 1-spp input | ~10 dB | — |
+| 1-spp input | ~10 dB | - |
 | Spatial only | 28.29 dB | ~+18 dB |
 
 
