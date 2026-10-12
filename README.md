@@ -98,7 +98,7 @@ alongside every number
 
 ### 1. Scene diversity
 
-BMFR ships 7 scenes, but 4 are Sponza variants — effectively 3 distinct
+BMFR ships 7 scenes, but 4 are Sponza variants - effectively 3 distinct
 environments. 
 
 Replacing it with 13 distinct Unreal scenes raised held-out performance, 
