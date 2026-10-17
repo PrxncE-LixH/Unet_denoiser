@@ -172,7 +172,7 @@ already in VRAM. PSNR is full-frame on the held-out scene.
 | Up-conv kernel | 3×3 | 1×1 |
 | Parameters | 8.00 M | 18.07 M |
 | Inference resolution | 960×528 | 960×528 |
-| **TRT fp16 compute (960×528) ** | **10.82 ms** | **2.35 ms** |
+| TRT fp16 compute (960×528)  | **10.82 ms** | **2.35 ms** |
 | **Held-out PSNR** | **33.71 dB** | **33.45 dB** |
 
 **4.6× faster for 0.26 dB**, with 2.3× the parameters.
