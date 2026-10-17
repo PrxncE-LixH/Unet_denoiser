@@ -208,7 +208,7 @@ the `main:scratch` allocation in the compiled program.
 
 - [ ] Further optimize model architecture to fit a real-time budget 
 - [ ] Falcor integration and frame-time measurement
-- [ ] FP8, INT8 quantization  
+- [ ] FP8, INT8 quantization and inference
 ---
 
 ## References
