@@ -177,34 +177,25 @@ already in VRAM. PSNR is full-frame on the held-out scene.
 
 **4.6× faster for 0.26 dB**, with 2.3× the parameters.
 
-## Inference cost
+## Cross-stack inference latency
 
 `(48, 96, 192, 384)` + stride-2 stem + 1×1 up-convs (**18.07 M parameters**),
 34.5 MiB of fp16 weights (constant across resolutions).
-
-| Render resolution | GPU compute | Activation memory | Total VRAM |
-|------|---|---|---|
-| 960×528   | 2.35 ms  | 73.1 MB  | 109.3 MB |
-| 1280×720  | 4.44 ms  | 132.9 MB | 169.1 MB |
-| 1920×1080 | 9.93 ms  | 298.9 MB | 335.1 MB |
-| 2560×1440 | 17.80 ms | 531.2 MB | 567.4 MB |
-
-## Cross-stack inference latency
-
 Identical 91-node ONNX graph, identical weights, fp16 on both stacks. Batch 1,
 median of 100 iterations, three independent runs per cell (spread < 1.5%).
 Engines and programs pre-built per resolution; neither stack uses dynamic shapes.
 
-| Resolution| TensorRT 10.15<br>RTX 5060 Ti | MIGraphX 2.17<br>RX 7900 XTX | Percentage Difference |
-|---|---|---|---|
-| 960×528   | 2.36 ms | 1.90  ms | 1.242× |
-| 1280×720  | 4.44 ms |  3.30 ms | 1.345× |
-| 1920×1080 | 9.93 ms |  7.30 ms | 1.360× |
-| 2560×1440 | 17.80 ms | 13.15 ms| 1.354× |
+| Render resolution | TensorRT 10.15<br>RTX 5060 Ti | MIGraphX 2.17<br>RX 7900 XTX | Speed-up | TRT activation | MIGraphX activation |
+|---|---|---|---|---|---|
+| 960×528   | 2.36 ms |  1.90 ms | 1.242× |  73.1 MB | 61.0 MB |
+| 1280×720  | 4.44 ms |  3.30 ms | 1.345× | 132.9 MB | 110.8 MB |
+| 1920×1080 | 9.93 ms |  7.30 ms | 1.360× | 298.9 MB | 249.1 MB |
+| 2560×1440 | 17.80 ms| 13.15 ms | 1.354× | 531.2 MB | 442.8 MB  |
 
 
 TensorRT measured with `--noDataTransfers`; MIGraphX programs compiled without
-offload copy. Both figures are device-resident compute.
+offload copy. Both figures are device-resident compute. MIGraphX activation read from
+the `main:scratch` allocation in the compiled program.
 
 ### The 1.35× is the compute ratio, not the bandwidth ratio
 
