@@ -187,10 +187,10 @@ Engines and programs pre-built per resolution; neither stack uses dynamic shapes
 
 | Render resolution | TensorRT 10.15<br>RTX 5060 Ti | MIGraphX 2.17<br>RX 7900 XTX | Speed-up | TRT activation | MIGraphX activation |
 |---|---|---|---|---|---|
-| 960×528   | 2.36 ms |  1.90 ms | 1.242× |  73.1 MB | 61.0 MB  |
-| 1280×720  | 4.44 ms |  3.30 ms | 1.345× | 132.9 MB | 110.8 MB |
-| 1920×1080 | 9.93 ms |  7.30 ms | 1.360× | 298.9 MB | 249.1 MB |
-| 2560×1440 | 17.80 ms| 13.15 ms | 1.354× | 531.2 MB | 442.8 MB |
+| 960×528   | 2.36 ms |  1.90 ms | 1.24× |  73.1 MB | 61.0 MB  |
+| 1280×720  | 4.44 ms |  3.30 ms | 1.34× | 132.9 MB | 110.8 MB |
+| 1920×1080 | 9.93 ms |  7.30 ms | 1.36× | 298.9 MB | 249.1 MB |
+| 2560×1440 | 17.80 ms| 13.15 ms | 1.35× | 531.2 MB | 442.8 MB |
 
 
 TensorRT measured with `--noDataTransfers`; MIGraphX programs compiled without
