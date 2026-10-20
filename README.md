@@ -2,8 +2,7 @@
 
 A Temporal U-Net denoiser for 1-spp path-traced frames, conditioned on G-buffers and a
 temporally reprojected history buffer. Trained on a custom Unreal Engine 5
-corpus. The model is **not yet real-time**. This will be addressed in the next iteration.
-
+corpus. 
 
 ---
 ## Temporal Build Video Demo 
